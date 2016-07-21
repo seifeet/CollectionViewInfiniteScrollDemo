@@ -1,6 +1,7 @@
 ## UIScrollView-Infinite
 
 Swift infinite scroll implementation as a category for UIScrollView.
+Works with both UICollectionView and UITableView
 
 ![preview](/Assets/sc1.png?raw=true "UIScrollView-Infinite with UICollectionView")
 

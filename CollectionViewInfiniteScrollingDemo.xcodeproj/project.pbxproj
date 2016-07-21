@@ -14,6 +14,9 @@
 		C231FA781D404260007862CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C231FA761D404260007862CE /* LaunchScreen.storyboard */; };
 		C231FA831D404260007862CE /* CollectionViewInfiniteScrollingDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C231FA821D404260007862CE /* CollectionViewInfiniteScrollingDemoTests.swift */; };
 		C231FA8E1D404260007862CE /* CollectionViewInfiniteScrollingDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C231FA8D1D404260007862CE /* CollectionViewInfiniteScrollingDemoUITests.swift */; };
+		C231FA9E1D4151B6007862CE /* SFCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C231FA9D1D4151B6007862CE /* SFCollectionViewFlowLayout.swift */; };
+		C231FAA01D415788007862CE /* SFCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C231FA9F1D415788007862CE /* SFCollectionViewCell.swift */; };
+		C231FAA21D415BEC007862CE /* UIScrollView-Infinite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C231FAA11D415BEC007862CE /* UIScrollView-Infinite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		C231FA891D404260007862CE /* CollectionViewInfiniteScrollingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewInfiniteScrollingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C231FA8D1D404260007862CE /* CollectionViewInfiniteScrollingDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewInfiniteScrollingDemoUITests.swift; sourceTree = "<group>"; };
 		C231FA8F1D404260007862CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C231FA9D1D4151B6007862CE /* SFCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		C231FA9F1D415788007862CE /* SFCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCollectionViewCell.swift; sourceTree = "<group>"; };
+		C231FAA11D415BEC007862CE /* UIScrollView-Infinite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView-Infinite.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				C231FA6D1D404260007862CE /* AppDelegate.swift */,
-				C231FA6F1D404260007862CE /* ViewController.swift */,
-				C231FA711D404260007862CE /* Main.storyboard */,
 				C231FA741D404260007862CE /* Assets.xcassets */,
-				C231FA761D404260007862CE /* LaunchScreen.storyboard */,
 				C231FA791D404260007862CE /* Info.plist */,
+				C231FA761D404260007862CE /* LaunchScreen.storyboard */,
+				C231FA711D404260007862CE /* Main.storyboard */,
+				C231FA9F1D415788007862CE /* SFCollectionViewCell.swift */,
+				C231FA9D1D4151B6007862CE /* SFCollectionViewFlowLayout.swift */,
+				C231FAA11D415BEC007862CE /* UIScrollView-Infinite.swift */,
+				C231FA6F1D404260007862CE /* ViewController.swift */,
 			);
 			path = CollectionViewInfiniteScrollingDemo;
 			sourceTree = "<group>";
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C231FAA21D415BEC007862CE /* UIScrollView-Infinite.swift in Sources */,
 				C231FA701D404260007862CE /* ViewController.swift in Sources */,
 				C231FA6E1D404260007862CE /* AppDelegate.swift in Sources */,
+				C231FA9E1D4151B6007862CE /* SFCollectionViewFlowLayout.swift in Sources */,
+				C231FAA01D415788007862CE /* SFCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

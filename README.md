@@ -2,6 +2,8 @@
 
 Swift infinite scroll implementation as a category for UIScrollView.
 
+![preview](/Assets/sc1.png?raw=true "UIScrollView-Infinite with UICollectionView")
+
 ### Basic usage
 
 ```swift

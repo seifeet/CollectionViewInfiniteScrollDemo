@@ -13,6 +13,7 @@ collectionView.sf_addInfiniteScrollWithHandler { [weak self] (scrollView) -> Voi
 }
 
 ```
+***
 
 #### sf_addInfiniteScrollWithHandler
 Setup infinite scroll handler

@@ -54,6 +54,10 @@ class ViewController: UIViewController {
         }
     }
     
+    deinit {
+        collectionView.sf_removeInfiniteScroll()
+    }
+    
     func addMoreData() {
         let beforeCount = data.count
         generateRandomData()

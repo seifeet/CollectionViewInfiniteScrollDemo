@@ -32,6 +32,17 @@
 //  3. This notice may not be removed or altered from any source distribution.
 //
 
+//
+//  UIScrollView-Infinite.swift
+//  Nebula
+//
+//  A Swift port of UIScrollView-InfiniteScroll by Andrej Mihajlov
+//  https://github.com/pronebird/UIScrollView-InfiniteScroll
+//
+//  Created by AT on 7/18/16.
+//  Copyright © 2016 Visva. All rights reserved.
+//
+
 import Foundation
 import UIKit
 import ObjectiveC
@@ -52,7 +63,7 @@ extension UIScrollView {
         static let AnimationDuration: NSTimeInterval = 0.35
         static var InfiniteScrollStateKey: UInt8 = 0
     }
-
+    
     /**
      *  Setup infinite scroll handler
      *
@@ -72,6 +83,7 @@ extension UIScrollView {
         self.panGestureRecognizer.addTarget(self, action: #selector(sf_handlePanGesture))
         
         state.initialized = true;
+        state.addObservers()
     }
     
     /**
@@ -79,12 +91,12 @@ extension UIScrollView {
      */
     func sf_removeInfiniteScroll() {
         let state = infiniteScrollState
-    
+        
         // Ignore multiple calls to remove infinite scroll
         if(!state.initialized) {
             return
         }
-    
+        
         // Remove pan gesture handler
         self.panGestureRecognizer.removeTarget(self, action: #selector(sf_handlePanGesture))
         
@@ -97,6 +109,9 @@ extension UIScrollView {
         
         // Mark infinite scroll as uninitialized
         state.initialized = false
+        
+        // remove observers
+        state.removeObservers()
     }
     
     /**
@@ -368,15 +383,10 @@ extension UIScrollView {
         convenience init(scrollView:UIScrollView) {
             self.init()
             self.targetScrollView = scrollView
-            self.addObservers()
-        }
-        
-        deinit {
-            removeObservers()
         }
         
         // MARK: observers
-        private func addObservers() {
+        func addObservers() {
             targetScrollView?.addObserver(self,
                                           forKeyPath: Constants.ContentSizeKey,
                                           options: NSKeyValueObservingOptions.New,
@@ -387,7 +397,7 @@ extension UIScrollView {
                                           context:&Constants.ContentOffsetContext)
         }
         
-        private func removeObservers() {
+        func removeObservers() {
             targetScrollView?.removeObserver(self, forKeyPath: Constants.ContentSizeKey)
             targetScrollView?.removeObserver(self, forKeyPath: Constants.ContentOffsetKey)
         }
@@ -449,7 +459,7 @@ extension UIScrollView {
             return storedState
         }
     }
-
+    
     /**
      *  Start animating infinite indicator
      */
